@@ -10,7 +10,7 @@
   <header>
     <nav>
       <a>
-        <img src="https://via.placeholder.com/138x70" width="138" height="70" alt="City of Sedona">
+        <img src="https://via.placeholder.com/138x70" width="138" height="70" alt="">
       </a>
       <ul>
         <li><a href="#">Информация</a></li>
@@ -22,7 +22,10 @@
   </header>
 
   <main>
-    <img src="https://via.placeholder.com/458x352" width="458" height="352" alt="Welcome to the gorgeous Sedona">
+    <section>
+      <h1>Добро пожаловать в Седону!</h1>
+      <img src="https://via.placeholder.com/458x352" width="458" height="352" alt="">
+    </section>
     <section>
       <h2>Седона — небольшой городок в Аризоне,<br /> заслуживающий большего!</h2>
       <h3>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h3>
@@ -31,7 +34,7 @@
           <h3>Настоящий<br />городок</h3>
           <p>— №1 —</p>
           <p>Седона - не аттракцион для туристов, там<br />течёт своя жизнь</p>
-          <img src="https://via.placeholder.com/800x256" width="800" height="256" alt="Седона1">
+          <img src="https://via.placeholder.com/800x256" width="800" height="256" alt="">
           <ul>
             <li>
               <h3>Жильё</h3>
@@ -48,7 +51,7 @@
           </ul>
         </li>
         <li>
-          <img src="https://via.placeholder.com/800x256" width="800" height="256" alt="Седона1">
+          <img src="https://via.placeholder.com/800x256" width="800" height="256" alt="">
           <h3>Там есть<br />Мост дьявола</h3>
           <p>— №2 —</p>
           <p>Да, по нему можно пройти! Если конечно<br />вы осмелитесь</p>
@@ -66,13 +69,60 @@
         <li>
           <h3>Мало<br />туристов</h3>
           <p>— №5 —</p>
-          <p>Большинство едет в Гранд Каньон и толпится там</p>
+          <p>Большинство едет в Гранд Каньон<br />и толпится там</p>
         </li>
       </ul>
     </section>
-
+    <section>
+      <h1>Заинтересовались?</h1>
+      <p>Укажите предполагаемые даты поездки,<br />и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
+      <p>ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</p>
+      <img src="https://via.placeholder.com/1200x594" width="1199" height="594" alt="">
+    </section>
   </main>
-
+  <footer>
+    <section>
+      <h2>#visitSEDONA</h2>
+      <p>
+        ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a>
+      </p>
+    </section>
+    <section>
+      <h3>Мы в сетях</h3>
+      <ul>
+        <li>
+          <a href="#">Вконтакте</a>
+        </li>
+        <li>
+          <a href="#">Фейсбук</a>
+        </li>
+        <li>
+          <a href="#">Инстаграм</a>
+        </li>
+      </ul>
+    </section>
+    <p>
+      Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="https://via.placeholder.com/115x41"
+          width="115" height="41" alt=""></a>
+    </p>
+    <section>
+      <h3>ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h3>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label for="arrival-data">Дата заезда:</label>
+        <input id="arrival-data" type="text" name="arrival-data" value="24 апреля 2017">
+        <br />
+        <label for="departure-data">Дата выезда:</label>
+        <input id="departure-data" type="text" name="departure-data" value="4 июля 2017">
+        <br />
+        <label for="adults-cnt">Взрослые:</label>
+        <input id="adults-cnt" type="number" name="adults-cnt" value="2">
+        <label for="children-cnt">Дети:</label>
+        <input id="children-cnt" type="number" name="children-cnt" value="0">
+        <br />
+        <button type="submit">Найти</button>
+      </form>
+    </section>
+  </footer>
 
 </body>
 
