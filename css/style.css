@@ -1,0 +1,30 @@
+/* Variables */
+
+:root {
+    --basic-black: #000000;
+    --basic-extra-dark: #242424;
+    --basic-dark: #aba9a7;
+    --basic-neutral: #e5e5e5;
+    --basic-extra-light: #f8f5f2;
+    --basic-white: #ffffff;
+  
+    --special: #663d15;
+  }
+
+  /* Global */
+
+body {
+    min-width: 1280px;
+    margin: 0;
+    padding: 40;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--basic-white);
+    text-transform: uppercase;
+    background-color: var(--basic-black);
+    background-image: url("../img/bg.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
