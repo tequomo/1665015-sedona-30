@@ -2,29 +2,97 @@
 
 :root {
     --basic-black: #000000;
-    --basic-extra-dark: #242424;
-    --basic-dark: #aba9a7;
-    --basic-neutral: #e5e5e5;
-    --basic-extra-light: #f8f5f2;
+    --basic-taupe-gray: #888888;
     --basic-white: #ffffff;
-  
-    --special: #663d15;
+    --basic-bright-gray: #eeeeee;
+    --basic-anti-flash-white: #f2f2f2;
+    --basic-dark-gray: #a9a9a9;
+    --basic-ivory-black: #231f20;
+    --basic-dark-sky-blue: #81b3d2;
+    --basic-deep-taupe: #766357;
+    --basic-dark-charcoal: #333333;
+    --basic-silver-chalice: #ababab;
+    --basic-granite-gray: #666666;
+
+    /*styleguide*/
+    --basic-dim-gray: #6a6a6a;
+    --basic-light-silver: #d8d8d8;
+    --basic-chinese-silver: #cacaca;
+    --basic-cerulean-frost: #669ec0;
+    --basic-silver-lake-blue: #5496bd;
+    --basic-umber : #604e43;
+    --basic-royal-brown : #503e33;
+    --basic-brighter-gray : #ebebeb;
+
+
+     /*colours of logo*/
+    --basic-darker-sky-blue: #81b3d3;
+    --basic-battery-charged-blue: #23a9e1;
+    --basic-medium-vermillion: #dc6243;
+    --basic-french-puce: #491213;
+    --basic-melon: #f4b1a4;
+
   }
 
   /* Global */
 
-body {
+  body {
     min-width: 1280px;
     margin: 0;
     padding: 40;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
-    line-height: 24px;
-    font-weight: 700;
-    color: var(--basic-white);
+    line-height: 26px;
+    font-weight: 400;
+    color: var(--basic-black);
     text-transform: uppercase;
-    background-color: var(--basic-black);
-    background-image: url("../img/bg.jpg");
-    background-position: top center;
-    background-repeat: no-repeat;
+    background-color: var(--basic-anti-flash-white);
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .site-navigation {
+    list-style: none;
+    font-weight: 700;
+  }
+
+  .site-navigation a {
+    color: var(--basic-black);
+
+  }
+
+  .site-navigation a:hover,
+  .site-navigation a:focus {
+    color: var(--basic-dark-sky-blue);
+  }
+
+  .site-navigation a:active {
+    color: var(--basic-black);
+    opacity: 0.3;
+  }
+.advantages ul {
+  list-style: none;
+}
+
+.advantages-item h3, .advantages-feature-item h3 {
+  font-size: 21px;
+  line-height: 21px;
+}
+ .advantages-item, .advantages-feature-item, .advantages h2, .advantages h3, .availability-search h1, .availability-search p {
+   text-align: center;
+ }
+
+ .advantages h3, .advantages-feature-item p, .advantages-item p {
+   color: var(--basic-dark-charcoal);
+ }
+
+
+
+
