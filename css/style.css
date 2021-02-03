@@ -2,8 +2,10 @@
 
 :root {
     --basic-black: #000000;
+    --basic-black-opacity: rgba(0, 0, 0, 0.3);
     --basic-taupe-gray: #888888;
     --basic-white: #ffffff;
+    --basic-white-opacity: rgba(255, 255, 255, 0.3);
     --basic-bright-gray: #eeeeee;
     --basic-anti-flash-white: #f2f2f2;
     --basic-dark-gray: #a9a9a9;
@@ -74,24 +76,79 @@
   }
 
   .site-navigation a:active {
-    color: var(--basic-black);
-    opacity: 0.3;
+    color: var(--basic-black-opacity);
   }
-.advantages ul {
-  list-style: none;
-}
 
-.advantages-item h3, .advantages-feature-item h3 {
-  font-size: 21px;
-  line-height: 21px;
-}
- .advantages-item, .advantages-feature-item, .advantages h2, .advantages h3, .availability-search h1, .availability-search p {
-   text-align: center;
- }
+  .advantages ul {
+    list-style: none;
+  }
 
- .advantages h3, .advantages-feature-item p, .advantages-item p {
-   color: var(--basic-dark-charcoal);
- }
+  .advantages-item h3, .advantages-features-item h3 {
+    font-size: 21px;
+    line-height: 21px;
+  }
+
+  .advantages-item, .advantages-features-item, .advantages h2, .advantages h3, .availability-search h1, .availability-search p {
+    text-align: center;
+  }
+
+  .availability-search h1 {
+    font-size: 30px;
+    line-height: 24px;
+  }
+
+  .advantages-features-item h3, .advantages-item h3 {
+    color: var(--basic-black);
+  }
+
+  .advantages h3, .advantages-features-item p, .advantages-item p {
+    color: var(--basic-dark-charcoal);
+  }
+
+  .index-logo {
+    background-image: url("../img/bg-photo.jpg");
+    background-position: center, 50% 50%;
+    background-repeat: no-repeat, repeat;
+  }
+
+  .index-logo h1 {
+    text-align: center;
+  }
+
+  .availability-search-button {
+    width: 568px;
+    height: 86px;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    vertical-align: middle;
+    background-color: var(--basic-deep-taupe);
+    border: none;
+  }
+
+  .availability-search-button:hover {
+    background-color: var(--basic-umber);
+  }
+
+  .availability-search-button:active {
+    background-color: var(--basic-royal-brown);
+    color: var(--basic-white-opacity);
+  }
+
+  .footer-contacts {
+    line-height: 26px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 26px;
+  }
+
+  .contacts-phone {
+    color: inherit;
+    font-weight: 700;
+  }
+
 
 
 
