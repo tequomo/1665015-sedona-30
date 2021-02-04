@@ -15,6 +15,8 @@
     --basic-dark-charcoal: #333333;
     --basic-silver-chalice: #ababab;
     --basic-granite-gray: #666666;
+    --basic-cyan-azure: #4B81AD;
+
 
     /*styleguide*/
     --basic-dim-gray: #6a6a6a;
@@ -22,9 +24,11 @@
     --basic-chinese-silver: #cacaca;
     --basic-cerulean-frost: #669ec0;
     --basic-silver-lake-blue: #5496bd;
-    --basic-umber : #604e43;
-    --basic-royal-brown : #503e33;
-    --basic-brighter-gray : #ebebeb;
+    --basic-umber: #604e43;
+    --basic-royal-brown: #503e33;
+    --basic-brighter-gray: #ebebeb;
+    --basic-raisin-black: #231F20;
+    --basic-platinum: #e5e5e5;
 
 
      /*colours of logo*/
@@ -41,7 +45,7 @@
   body {
     min-width: 1280px;
     margin: 0;
-    padding: 40;
+    padding: 0;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
     line-height: 26px;
@@ -88,13 +92,18 @@
     line-height: 21px;
   }
 
-  .advantages-item, .advantages-features-item, .advantages h2, .advantages h3, .availability-search h1, .availability-search p {
+  .advantages-item,
+  .advantages-features-item,
+  .advantages h2,
+  .advantages h3,
+  .availability-search {
     text-align: center;
   }
 
   .availability-search h1 {
     font-size: 30px;
     line-height: 24px;
+    text-align: center;
   }
 
   .advantages-features-item h3, .advantages-item h3 {
@@ -106,16 +115,14 @@
   }
 
   .index-logo {
+    background-color: var(--basic-cyan-azure);
     background-image: url("../img/bg-photo.jpg");
     background-position: center, 50% 50%;
     background-repeat: no-repeat, repeat;
-  }
-
-  .index-logo h1 {
     text-align: center;
   }
 
-  .availability-search-button {
+   .availability-search-button {
     width: 568px;
     height: 86px;
     font-size: 21px;
@@ -128,7 +135,7 @@
     border: none;
   }
 
-  .availability-search-button:hover {
+  .availability-search-button:hover, .availability-search-button:focus {
     background-color: var(--basic-umber);
   }
 
@@ -137,7 +144,7 @@
     color: var(--basic-white-opacity);
   }
 
-  .footer-contacts {
+  .footer-contacts h2, .footer-contacts p {
     line-height: 26px;
     text-align: center;
     font-weight: 700;
@@ -148,6 +155,96 @@
     color: inherit;
     font-weight: 700;
   }
+
+  .footer-social, .footer-copyright {
+    text-align: center;
+    vertical-align: middle;
+   }
+
+  .footer-social-list {
+    list-style: none;
+   }
+
+  .social-button {
+    font-weight: 700;
+    color: var(--basic-black);
+    background-color: var(--basic-dark-sky-blue);
+  }
+
+  .social-button:hover, .social-button:focus {
+    background-color: var(--basic-cerulean-frost);
+  }
+  .social-button:active {
+    background-color: var(--basic-silver-lake-blue);
+  }
+
+  /* Modal */
+
+  .modal {
+    color: var(--basic-black);
+    font-weight: 700;
+    background-color: var(--basic-white);
+  }
+
+  .modal h3 {
+    font-size: 21px;
+    line-height: 26px;
+    }
+
+  .search-button {
+    width: 458px;
+    height: 58px;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    vertical-align: middle;
+    background-color: var(--basic-dark-sky-blue);
+    border: none;
+  }
+
+  .search-button:hover, .search-button:focus {
+    background-color: var(--basic-cerulean-frost);
+    }
+
+  .search-button:active {
+    background-color: var(--basic-silver-lake-blue);
+    color: var(--basic-white-opacity);
+  }
+
+  /* Login form */
+
+  .search-form input[type="text"],
+  .search-form input[type="number"] {
+    font: inherit;
+    line-height: inherit;
+    color: var(--basic-black);
+    text-transform: uppercase;
+    background-color: var(--basic-anti-flash-white);
+    border: none;
+  }
+
+  .search-form input[type="text"]:hover,
+  .search-form input[type="number"]:hover {
+    background-color: var(--basic-brighter-gray);
+    border: none;
+  }
+
+  .search-form input[type="text"]:focus,
+  .search-form input[type="number"]:focus {
+    border: 2px solid;
+    border-color: var(--basic-platinum);
+    background-color: var(--basic-white);
+  }
+
+
+
+
+
+
+
 
 
 
