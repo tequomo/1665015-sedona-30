@@ -181,8 +181,8 @@
   /* Modal */
 
   .modal {
-    color: var(--basic-black);
     font-weight: 700;
+    color: var(--basic-black);
     background-color: var(--basic-white);
   }
 
@@ -212,6 +212,7 @@
   .search-button:active {
     background-color: var(--basic-silver-lake-blue);
     color: var(--basic-white-opacity);
+    border: none;
   }
 
   /* Login form */
@@ -238,6 +239,7 @@
     border-color: var(--basic-platinum);
     background-color: var(--basic-white);
   }
+
 
 
 
