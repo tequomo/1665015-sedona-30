@@ -83,29 +83,26 @@
     color: var(--basic-black-opacity);
   }
 
+  .site-navigation-current a:not([href]) {
+    color: var(--basic-deep-taupe);
+  }
+  
   .advantages ul {
     list-style: none;
   }
-
+  .advantages h2, .advantages h3 {
+    text-align: center;
+  }
+  
   .advantages-item h3, .advantages-features-item h3 {
     font-size: 21px;
     line-height: 21px;
   }
-
-  .advantages-item,
-  .advantages-features-item,
-  .advantages h2,
-  .advantages h3,
-  .availability-search {
+    
+  .advantages-item, .advantages-features-item {
     text-align: center;
   }
-
-  .availability-search h1 {
-    font-size: 30px;
-    line-height: 24px;
-    text-align: center;
-  }
-
+  
   .advantages-features-item h3, .advantages-item h3 {
     color: var(--basic-black);
   }
@@ -119,6 +116,16 @@
     background-image: url("../img/bg-photo.jpg");
     background-position: center, 50% 50%;
     background-repeat: no-repeat, repeat;
+    text-align: center;
+  }
+
+  .availability-search {
+    text-align: center;
+  }
+
+  .availability-search h1 {
+    font-size: 30px;
+    line-height: 24px;
     text-align: center;
   }
 
@@ -239,16 +246,176 @@
     border-color: var(--basic-platinum);
     background-color: var(--basic-white);
   }
+  
+  .search-filter {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-white);
+    background-color: var(--basic-cyan-azure);
+    background-image: url(../img/bg-filter.jpg);
+    background-repeat: no-repeat;
+    background-position: center, 50% 50%;
+  }
+  
+  .search-filter h2 {
+    line-height: 26px;
+  }
+  
+  .search-filter-form legend {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+  }
+  
+  .search-filter-form fieldset {
+    border: none;
+  }
+  
+  .search-filter-form ul {
+    list-style: none;
+  }
+  
+  .search-filter-checkbox:hover + label,
+  .search-filter-checkbox:focus + label  {
+    color: var(--basic-white);
+    background-color: transparent;
+  }
+  
+  .search-cost-value input {
+    background-color: transparent;
+    border: 2px solid var(--basic-white);
+    color: var(--basic-white);
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .search-cost-range input {
+    width: 220px;
+    height: 2px;
+  }
+  
+  .search-filter-button {
+    width: 137px;
+    height: 36px;
+    font: inherit;
+    color: var(--basic-white);
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid var(--basic-white);
+  }
+  
+  .search-filter-button:hover, .search-filter-button:focus {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+  }
+  
+  /* Search result section */
+  
+  .search-result {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+  }
 
+  .search-result ul {
+    list-style: none;    
+  }
+ 
+  .search-result-value {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+  }
 
+  .sorting-switches {
+    font-size: 12px;
+    line-height: 18px;    
+  }
 
+  .sorting-switches h3 {
+    color: var(--basic-black);
+  }
 
+  .sorting-switches a {
+    color: var(--basic-black-opacity);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
 
+  .sorting-switches-current a:not([href]) {
+    color: var(--basic-dark-sky-blue);
+    text-decoration: none;
+  }
 
+  .sorting-switches a:hover, .sorting-switches a:focus {
+    color: var(--basic-dark-sky-blue);
+  }
 
+  .sorting-switches a:active {
+    color: var(--basic-black);
+    text-decoration: none;
+  }
 
+  .search-result-item h2 {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;    
+  }
 
+  .search-item-name {
+    color: var(--basic-black);
+  }
 
+  .search-item-name:hover, .search-item-name:focus {
+    color: var(--basic-dark-sky-blue);
+  }
 
+  .search-item-name:active {
+    color: var(--basic-black-opacity);
+  }
 
+  .search-item-details {
+    width: 110px;
+    height: 27px;
+    background-color: var(--basic-dark-sky-blue);
+    padding: 3px 16px 3px 17px;
+  }
 
+  .search-item-booking {
+    width: 142px;
+    height: 27px;
+    background-color: var(--basic-deep-taupe);
+    padding: 3px 16px 3px 17px;
+  }
+
+  .search-item-details, .search-item-booking {
+    font-weight: 700;
+    color: var(--basic-white);
+  }
+
+  .search-item-details:hover, .search-item-details:focus {
+    background-color: var(--basic-cerulean-frost);
+  }
+
+  .search-item-details:active {
+    background-color: var(--basic-silver-lake-blue);
+    color: var(--basic-white-opacity);
+  }
+
+  .search-item-booking:hover, .search-item-booking:focus {
+    background-color: var(--basic-umber);
+  }
+
+  .search-item-booking:active {
+    background-color: var(--basic-royal-brown);
+    color: var(--basic-white-opacity);
+  }
+
+  .item-rating-value {
+    width: 110px;
+    height: 27px;
+    color: var(--basic-granite-gray);
+    background-color: var(--basic-anti-flash-white);
+    padding: 3px 12px 3px 15px;
+  }
+ 
