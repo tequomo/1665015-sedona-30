@@ -16,6 +16,7 @@
     --basic-silver-chalice: #ababab;
     --basic-granite-gray: #666666;
     --basic-cyan-azure: #4B81AD;
+    --basic-chinese-silver-shadow: rgba(0, 1, 1, 0.2);
 
 
     /*styleguide*/
@@ -38,6 +39,10 @@
     --basic-french-puce: #491213;
     --basic-melon: #f4b1a4;
 
+    /* Grid outline colours*/
+    --grid-tomato-opacity: rgba(189, 45, 2, 0.7);
+    --grid-lime-opacity: rgba(112, 202, 39, 0.7);
+
   }
 
   /* Global */
@@ -53,6 +58,19 @@
     color: var(--basic-black);
     text-transform: uppercase;
     background-color: var(--basic-anti-flash-white);
+
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+  }
+
+  .body-wrapper {
+    min-width: 1200px;
+    height: 100%;
+    margin: 0px 40px;
+    background-color: var(--basic-white);
+    box-shadow: 0px 5px 15px var(--basic-chinese-silver-shadow);
   }
 
   a {
@@ -64,9 +82,22 @@
     height: auto;
   }
 
+  /* Grid */
+
+  .page {
+    height: 100%;
+  }
+
+  /* Main header */
+
+
+  /* Navigation */
+
   .site-navigation {
     list-style: none;
     font-weight: 700;
+    margin: 0px;
+    padding: 0px;
   }
 
   .site-navigation a {
@@ -86,23 +117,56 @@
   .site-navigation-current a:not([href]) {
     color: var(--basic-deep-taupe);
   }
-  
+
+  .main-navigation {
+    display: grid;
+  }
+
+  .main-header-bar {
+    background-color: var(--basic-white);
+    height: 56px;
+  }
+
+  /* Header logo */
+
+  .main-header-logo {
+    position: absolute;
+    top: 0px;
+    left: 571px;
+    width: 138px;
+    height: 70px;
+  }
+
+  /* Advantages */
+
+  .advantages {
+    outline: 5px solid rgba(255, 0, 0, 0.3);
+    outline-offset: -5px;
+  }
+
   .advantages ul {
     list-style: none;
+    margin: 0px;
+    padding: 0px;
   }
   .advantages h2, .advantages h3 {
     text-align: center;
   }
-  
+/*
+  .advantages-features-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+*/
   .advantages-item h3, .advantages-features-item h3 {
     font-size: 21px;
     line-height: 21px;
   }
-    
+
   .advantages-item, .advantages-features-item {
     text-align: center;
   }
-  
+
   .advantages-features-item h3, .advantages-item h3 {
     color: var(--basic-black);
   }
@@ -118,6 +182,8 @@
     background-repeat: no-repeat, repeat;
     text-align: center;
   }
+
+  /* Modal button */
 
   .availability-search {
     text-align: center;
@@ -149,6 +215,13 @@
   .availability-search-button:active {
     background-color: var(--basic-royal-brown);
     color: var(--basic-white-opacity);
+  }
+
+  /* Footer */
+
+  .main-footer {
+    outline: 5px solid var(--grid-lime-opacity);
+    outline-offset: -5px;
   }
 
   .footer-contacts h2, .footer-contacts p {
@@ -185,12 +258,13 @@
     background-color: var(--basic-silver-lake-blue);
   }
 
-  /* Modal */
+  /* Modal window */
 
   .modal {
     font-weight: 700;
     color: var(--basic-black);
     background-color: var(--basic-white);
+    display: none;
   }
 
   .modal h3 {
@@ -246,7 +320,9 @@
     border-color: var(--basic-platinum);
     background-color: var(--basic-white);
   }
-  
+
+  /* Filter */
+
   .search-filter {
     font-size: 14px;
     line-height: 21px;
@@ -256,31 +332,31 @@
     background-repeat: no-repeat;
     background-position: center, 50% 50%;
   }
-  
+
   .search-filter h2 {
     line-height: 26px;
   }
-  
+
   .search-filter-form legend {
     font-size: 16px;
     line-height: 21px;
     font-weight: 700;
   }
-  
+
   .search-filter-form fieldset {
     border: none;
   }
-  
+
   .search-filter-form ul {
     list-style: none;
   }
-  
+
   .search-filter-checkbox:hover + label,
   .search-filter-checkbox:focus + label  {
     color: var(--basic-white);
     background-color: transparent;
   }
-  
+
   .search-cost-value input {
     background-color: transparent;
     border: 2px solid var(--basic-white);
@@ -288,12 +364,12 @@
     text-transform: uppercase;
     text-align: center;
   }
-  
+
   .search-cost-range input {
     width: 220px;
     height: 2px;
   }
-  
+
   .search-filter-button {
     width: 137px;
     height: 36px;
@@ -303,14 +379,14 @@
     background-color: transparent;
     border: 2px solid var(--basic-white);
   }
-  
+
   .search-filter-button:hover, .search-filter-button:focus {
     color: var(--basic-black);
     background-color: var(--basic-white);
   }
-  
+
   /* Search result section */
-  
+
   .search-result {
     font-size: 14px;
     line-height: 21px;
@@ -318,9 +394,9 @@
   }
 
   .search-result ul {
-    list-style: none;    
+    list-style: none;
   }
- 
+
   .search-result-value {
     font-size: 21px;
     line-height: 26px;
@@ -329,7 +405,7 @@
 
   .sorting-switches {
     font-size: 12px;
-    line-height: 18px;    
+    line-height: 18px;
   }
 
   .sorting-switches h3 {
@@ -359,7 +435,7 @@
   .search-result-item h2 {
     font-size: 21px;
     line-height: 26px;
-    font-weight: 700;    
+    font-weight: 700;
   }
 
   .search-item-name {
@@ -418,4 +494,4 @@
     background-color: var(--basic-anti-flash-white);
     padding: 3px 12px 3px 15px;
   }
- 
+
