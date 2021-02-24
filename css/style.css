@@ -118,30 +118,25 @@
     list-style: none;
     font-weight: 700;
     margin: 0px;
-    padding: 0px;
+    padding: 0px 72px;
   }
 
   .site-navigation li {
-    flex-basis: 100%;
-    display: flex;
+    width: 227px;
   }
 
-  .site-navigation li:first-child a {
-    margin-right: auto;
-    padding-left: 72px;
+  .site-navigation li:first-child,
+  .site-navigation li:nth-child(2) {
+    text-align: left;
   }
 
-  .site-navigation li:nth-child(2) a {
-    margin-right: auto;
+  .site-navigation li:nth-last-child(2),
+  .site-navigation li:last-child {
+    text-align: right;
   }
 
-  .site-navigation li:nth-last-child(2) a {
+  .site-navigation li:nth-last-child(2) {
     margin-left: auto;
-  }
-
-  .site-navigation li:last-child a {
-    margin-left: auto;
-    padding-right: 72px;
   }
 
   .site-navigation a {
@@ -647,14 +642,6 @@
     padding: 0px;
   }
 
-  .search-result-item {
-    display: grid;
-    grid-template-columns: 172px 1fr min-content;
-    padding: 23px 73px;
-    border-bottom: 1px solid var(--basic-platinum);
-    align-self: center;
-  }
-
   .search-result {
     font-size: 14px;
     line-height: 21px;
@@ -666,6 +653,7 @@
     grid-template-columns: 172px 1fr;
     padding: 0px 72px;
     border-bottom: 1px solid var(--basic-platinum);
+    height: 86px;
   }
 
   .search-result ul {
@@ -676,7 +664,8 @@
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
-    margin: auto 0px;
+    align-self: center;
+    margin: 0px;
     padding: 0px;
   }
 
@@ -701,6 +690,9 @@
 
   .sorting-switches h3 {
     color: var(--basic-black);
+    margin: 0px;
+    padding: 0px;
+    align-self: center;
   }
 
   .sorting-switches a {
@@ -723,18 +715,41 @@
     text-decoration: none;
   }
 
-  .search-result-item h2 {
+  .search-result-item {
+    display: grid;
+    grid-template-columns: 164px 1fr min-content;
+    padding: 30px 73px;
+    border-bottom: 1px solid var(--basic-platinum);
+    align-self: center;
+    min-height: 150px;
+  }
+
+  .search-result-summary {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+
+  .search-result-summary h2 {
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
-    margin-top: 0px;
-    margin-bottom: 7px;
+    margin: 0px;
+    margin-top: -6px;
     padding: 0px;
   }
 
-  .search-result-item p:first-of-type {
-    margin-top: 0px;
-    margin-bottom: 15px;
+  .search-result-summary p {
+    margin: 0px;
+    display: flex;
+  }
+
+  .search-result-summary span:first-child {
+    width: 116px;
+  }
+
+  .search-result-summary span:last-child {
+    width: 142px;
   }
 
   .search-item-name {
@@ -754,6 +769,7 @@
     height: 27px;
     background-color: var(--basic-dark-sky-blue);
     padding: 3px 16px 3px 17px;
+    margin-right: 6px;
   }
 
   .search-item-booking {
@@ -786,15 +802,22 @@
     color: var(--basic-white-opacity);
   }
 
+  .search-item-rating {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .search-item-rating p {
+    margin: 0px;
+  }
+
   .item-rating-value {
     width: 110px;
     height: 27px;
     color: var(--basic-granite-gray);
     background-color: var(--basic-anti-flash-white);
     padding: 3px 12px 3px 15px;
-  }
-
-  .item-rating-stars {
-    text-align: right;
   }
 
