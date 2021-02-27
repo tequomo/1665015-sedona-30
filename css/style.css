@@ -577,7 +577,14 @@
     background-color: var(--basic-anti-flash-white);
     border: none;
     height: 38px;
+  }
+
+  .search-form input[type="text"] {
     padding: 6px 13px;
+  }
+
+  .search-form input[type="number"] {
+    padding: 6px 35px;
   }
 
   .search-form input[type="text"]:hover,
@@ -601,54 +608,60 @@
     position: relative;
   }
 
-  .arrival-block svg, .departure-block svg {
-    display: block;
+  .arrival-block button, .departure-block button, .guests-block button {
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
     position: absolute;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .arrival-block button, .departure-block button {
     top: 8px;
     left: 428px;
   }
 
-  .arrival-block svg:hover path, .arrival-block svg:focus path,
-  .departure-block svg:hover path, .departure-block svg:focus path {
+  .arrival-block button:hover path, .arrival-block button:focus path,
+  .departure-block button:hover path, .departure-block button:focus path {
     fill: var(--basic-black);
   }
 
-  .arrival-block svg:active path, .departure-block svg:active path {
+  .arrival-block button:active path, .departure-block button:active path {
     fill: var(--basic-dark-sky-blue);
   }
 
-  .guests-block svg {
-    display: block;
-    position: absolute;
-  }
-
-  .guests-block rect:hover, .guests-block rect:focus,
-  .guests-block path:hover, .guests-block path:focus {
+  .guests-block button:hover rect, .guests-block button:focus rect,
+  .guests-block button:hover path, .guests-block button:focus path {
     fill: var(--basic-black);
   }
 
-  .guests-block rect:active,
-  .guests-block path:active {
+  .guests-block button:active rect,
+  .guests-block button:active path {
     fill: var(--basic-dark-sky-blue);
   }
 
-  .guests-block svg:first-of-type {
-    top: 18px;
+  .guests-block button:first-of-type {
+    top: 8px;
     left: 125px;
   }
 
-  .guests-block svg:nth-of-type(2) {
-    top: 14px;
+  .guests-block button:nth-of-type(2) {
+    top: 8px;
     left: 201px;
   }
 
-  .guests-block svg:nth-of-type(3) {
-    top: 18px;
+  .guests-block button:nth-of-type(3) {
+    top: 8px;
     left: 358px;
   }
 
-  .guests-block svg:last-of-type {
-    top: 14px;
+  .guests-block button:last-of-type {
+    top: 8px;
     left: 434px;
   }
 
