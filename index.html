@@ -134,35 +134,39 @@
           </p>
           <p class="guests-block">
             <label for="adults-cnt">Взрослые:</label>
-            <button type="button" onclick="this.nextElementSibling.stepDown();">
-              <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="12" height="3" fill="#A9A9A9" />
-              </svg>
-            </button>
-            <input class="search-field-adults" id="adults-cnt" type="number" min="1" max="10" name="adults-cnt"
-              value="2">
-            <button type="button" onclick="this.previousElementSibling.stepUp();">
-              <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
-                  fill="#A9A9A9" />
-              </svg>
-            </button>
+            <span>
+              <button type="button" onclick="this.nextElementSibling.stepDown();">
+                <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="12" height="3" fill="#A9A9A9" />
+                </svg>
+              </button>
+              <input class="search-field-adults" id="adults-cnt" type="number" min="1" max="10" name="adults-cnt"
+                value="2">
+              <button type="button" onclick="this.previousElementSibling.stepUp();">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                    fill="#A9A9A9" />
+                </svg>
+              </button>
+            </span>
             <label for="children-cnt">Дети:</label>
-            <button type="button" onclick="this.nextElementSibling.stepDown();">
-              <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="12" height="3" fill="#A9A9A9" />
-              </svg>
-            </button>
-            <input class="search-field-children" id="children-cnt" type="number" min="0" max="10" name="children-cnt"
-              value="0">
-            <button type="button" onclick="this.previousElementSibling.stepUp();">
-              <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
-                  fill="#A9A9A9" />
-              </svg>
-            </button>
+            <span>
+              <button type="button" onclick="this.nextElementSibling.stepDown();">
+                <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="12" height="3" fill="#A9A9A9" />
+                </svg>
+              </button>
+              <input class="search-field-children" id="children-cnt" type="number" min="0" max="10" name="children-cnt"
+                value="0">
+              <button type="button" onclick="this.previousElementSibling.stepUp();">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                    fill="#A9A9A9" />
+                </svg>
+              </button>
+            </span>
           </p>
           <button class="search-button" type="submit">Найти</button>
         </form>

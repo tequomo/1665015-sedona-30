@@ -584,7 +584,7 @@
   }
 
   .search-form input[type="number"] {
-    padding: 6px 35px;
+    flex-grow: 1;
   }
 
   .search-form input[type="text"]:hover,
@@ -608,7 +608,7 @@
     position: relative;
   }
 
-  .arrival-block button, .departure-block button, .guests-block button {
+  .arrival-block button, .departure-block button {
     padding: 0;
     border: none;
     color: inherit;
@@ -635,6 +635,18 @@
     fill: var(--basic-dark-sky-blue);
   }
 
+  .guests-block button {
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: var(--basic-anti-flash-white);
+    cursor: pointer;
+    width: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .guests-block button:hover rect, .guests-block button:focus rect,
   .guests-block button:hover path, .guests-block button:focus path {
     fill: var(--basic-black);
@@ -645,24 +657,14 @@
     fill: var(--basic-dark-sky-blue);
   }
 
-  .guests-block button:first-of-type {
-    top: 8px;
-    left: 125px;
+  .guests-block span {
+    display: flex;
+    flex-basis: 114px;
   }
 
-  .guests-block button:nth-of-type(2) {
-    top: 8px;
-    left: 201px;
-  }
-
-  .guests-block button:nth-of-type(3) {
-    top: 8px;
-    left: 358px;
-  }
-
-  .guests-block button:last-of-type {
-    top: 8px;
-    left: 434px;
+  .guests-block label:last-of-type {
+    margin-left: 13px;
+    margin-right: -13px;
   }
 
   .search-form label{
@@ -671,9 +673,7 @@
   }
 
   .search-form input[type="number"] {
-    width: 114px;
     text-align: center;
-    display: block;
     -moz-appearance:textfield; /* Hide arrows in Firefox */
   }
 
