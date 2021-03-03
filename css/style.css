@@ -94,7 +94,7 @@
     margin: -1px;
   }
 
-  * {
+  *, *::before, *::after {
     box-sizing: border-box;
   }
 
@@ -275,10 +275,6 @@
   .white-on-blue {
     color: var(--basic-white);
   }
-/*
-  .advantages-features-item {
-    padding: 60px;
-  } */
 
   .advantages-item h3, .advantages-features-item h3 {
     font-size: 21px;
@@ -375,11 +371,15 @@
     min-height: 884px;
     padding-top: 58px;
     margin-bottom: -120px;
-    z-index: -1;
+    /* z-index: -1; */
+    position: relative;
   }
 
   .availability-search img {
     width: 1200px;
+    display: block;
+    margin: 0px;
+    padding: 0px;
   }
 
   .availability-search h1 {
@@ -393,6 +393,10 @@
     text-align: center;
     margin-top: 30px;
     margin-bottom: 48px;
+  }
+
+  .availability-search iframe {
+    border: none;
   }
 
    .availability-search-button {
@@ -531,9 +535,10 @@
     font-weight: 700;
     color: var(--basic-black);
     background-color: var(--basic-white);
-    box-sizing:border-box;
+    /* box-sizing:border-box; */
     padding: 55px;
     box-shadow: 0px 7px 15px var(--basic-black-opacity-low);
+    outline: 1px solid var(--basic-medium-vermillion);
   }
 
   .modal h3 {
