@@ -563,6 +563,10 @@ img {
   fill: var(--basic-gray);
 }
 
+.copyright-catalog {
+  padding-top: 4px;
+}
+
 .footer-social-list {
   list-style: none;
   padding: 0px;
@@ -961,7 +965,7 @@ img {
 .range-controls {
   position: relative;
   height: 30px;
-  padding-top: 14px;
+  padding-top: 16px;
 }
 
 .range-controls .scale {
