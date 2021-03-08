@@ -645,6 +645,38 @@ img {
           box-shadow: 0px 7px 15px var(--basic-black-opacity-low);
 }
 
+.modal-hide {
+  display: none;
+}
+/* 
+@keyframes modal-down {
+  0% {
+    transform: translateY(-395px);
+  }
+  100% {
+    transform: translateY(395px);
+  }
+}
+
+@keyframes modal-up {
+  0% {
+    transform: translateY(395px);
+  }
+  100% {
+    transform: translateY(-395px);
+  }
+}
+
+.modal-animate-down {
+  animation-name: modal-down;
+  animation-duration: 2s;
+}
+
+.modal-animate-up {
+  animation-name: modal-up;
+  animation-duration: 2s;
+} */
+
 .modal h3 {
   font-size: 21px;
   line-height: 26px;
