@@ -15,11 +15,12 @@ const modalSubmitButton = document.querySelector(".search-button");
 // Event Handlers
 
 // Hide Modal Section On Page Load
-window.onload = modalSection.classList.add("modal-hide");
+// window.onload = modalSection.classList.add("modal-hide");
+window.onload = modalSection.classList.add("modal-animate");
 
 // Show / Hide Modal Section
 modalButton.addEventListener("click", function (evt) {
-    modalSection.classList.toggle("modal-hide");
+    modalSection.classList.toggle("modal-animate");
     if (modalSection.classList.contains("modal-hide")) {
         modalSection.focus();
     }

@@ -470,6 +470,7 @@ img {
   vertical-align: middle;
   background-color: var(--basic-deep-taupe);
   border: none;
+  z-index: 1;
 }
 
 .availability-search-button:hover, .availability-search-button:focus {
@@ -648,16 +649,18 @@ img {
 .modal-hide {
   display: none;
 }
-/* 
-@keyframes modal-down {
-  0% {
-    transform: translateY(-395px);
-  }
+
+@keyframes modal-animate {
+  /* 0% {
+    /* transform: translateY(-395px);
+    bottom: 78px;
+  } */
   100% {
-    transform: translateY(395px);
+    /* transform: translateY(395px); */
+    bottom: 473px;
   }
 }
-
+/*
 @keyframes modal-up {
   0% {
     transform: translateY(395px);
@@ -666,12 +669,13 @@ img {
     transform: translateY(-395px);
   }
 }
-
-.modal-animate-down {
-  animation-name: modal-down;
+*/
+.modal-animate {
+  animation-name: modal-animate;
   animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
-
+/*
 .modal-animate-up {
   animation-name: modal-up;
   animation-duration: 2s;
@@ -979,7 +983,7 @@ img {
 }
 
 .search-filter-checkbox:focus + label::before,
-.search-filter-checkbox:checked:focus + label::before, 
+.search-filter-checkbox:checked:focus + label::before,
 .search-filter-form fieldset:nth-of-type(2) .search-filter-checkbox:focus + label::before,
 .search-filter-form fieldset:nth-of-type(2) .search-filter-checkbox:checked:focus + label::before {
   outline: 2px solid var(--basic-black);
