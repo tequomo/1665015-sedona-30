@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 /* Variables */
 
 :root {
@@ -479,11 +472,8 @@ img {
 
 .map-review {
   text-align: center;
-  /* min-height: 884px; */
-  /* padding-top: 57px; */
   margin-bottom: -120px;
   position: relative;
-  /* z-index: 4; */
 }
 
 .map-review img {
@@ -497,7 +487,6 @@ img {
   border: none;
   display: block;
   position: relative;
-  /* z-index: 1; */
 }
 
 /* Footer */
@@ -512,7 +501,6 @@ img {
   background-color: var(--basic-white-opacity-low);
   position: absolute;
   width: 100%;
-  /* z-index: 5; */
 }
 
 .footer-contacts {
@@ -652,7 +640,6 @@ img {
 
 .modal {
   position: absolute;
-  /* top: 2173px; */
   bottom: 78px;
   left: 316px;
   width: 568px;
