@@ -45,7 +45,6 @@
   /* Grid outline colours*/
   --grid-tomato-opacity: rgba(189, 45, 2, 0.7);
   --grid-lime-opacity: rgba(112, 202, 39, 0.7);
-
 }
 
 /* Global */
@@ -474,13 +473,7 @@ img {
   text-align: center;
   margin-bottom: -120px;
   position: relative;
-}
-
-.map-review img {
-  width: 1200px;
-  display: block;
-  margin: 0px;
-  padding: 0px;
+  background-image: url(../img/map.jpg);
 }
 
 .map-review iframe {
@@ -653,10 +646,6 @@ img {
   z-index: 2;
 }
 
-.modal-hide {
-  display: none;
-}
-
 @keyframes modal-animate-up {
   0% {
     bottom: 78px;
@@ -721,7 +710,6 @@ img {
 
 .modal-animate-error {
   animation: modal-shake 0.6s;
-  animation-fill-mode: forwards;
 }
 
 .modal h3 {
@@ -938,7 +926,7 @@ img {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 .search-filter-form fieldset, .search-form fieldset {
@@ -952,8 +940,8 @@ img {
   grid-row: 1 / -1;
 }
 
-.search-filter-form fieldset:last-of-type legend {
-  margin-bottom: 10px;
+fieldset:last-of-type legend {
+  margin-bottom: 11px;
 }
 
 .search-filter-form ul {
@@ -977,7 +965,7 @@ img {
   margin-left: 38px;
 }
 
-.search-filter-form fieldset:nth-of-type(2) ul li {
+.living-type-block li {
   margin-left: 43px;
 }
 
@@ -1251,16 +1239,18 @@ img {
       align-self: center;
 }
 
-.sorting-switches a {
-  color: var(--basic-black-opacity);
-  text-decoration: underline;
-  -webkit-text-decoration-style: dotted;
-          text-decoration-style: dotted;
+.sorting-case a {
+ color: var(--basic-black-opacity);
 }
 
-.sorting-switches-current a:not([href]) {
+.sorting-case:not(:last-of-type) a {
+  border-bottom: 1px dotted var(--basic-black-opacity);
+}
+
+.sorting-case-current a:not(href):first-of-type {
   color: var(--basic-dark-sky-blue);
   text-decoration: none;
+  border-bottom: none;
 }
 
 .sorting-switches a:hover, .sorting-switches a:focus {
@@ -1287,7 +1277,9 @@ img {
   fill: var(--basic-black);
 }
 
-.search-result-ascend:active path, .search-result-descend:active path {
+.search-result-ascend:active path,
+.search-result-descend:active path,
+.search-result-current path {
   fill: var(--basic-dark-sky-blue);
 }
 

@@ -37,10 +37,6 @@ modalSection.classList.add("modal-animate-up");
 searchForm.querySelector("fieldset").disabled = true;
 }
 
-// if (modalSection.classList.contains("modal-animate-up")) {
-//   searchForm.querySelector("fieldset").disabled = true;
-// } else searchForm.querySelector("fieldset").disabled = false;
-
 modalButton.addEventListener("click", function (evt) {
   if (modalSection.classList.contains("modal-animate-up")) {
     modalSection.classList.remove("modal-animate-up");
@@ -100,7 +96,7 @@ try {
 
 // Check Form
 searchForm.addEventListener("submit", function (evt) {
-  if (!arrivalDate.value || !departureDate.value || !adultsAmount.value || !childrenAmount.value || adultsAmount.value < adultsAmountMin || childrenAmount.value < childrenAmountMin) {
+  if (!arrivalDate.value || !departureDate.value || !adultsAmount.value || !childrenAmount.value) {
     evt.preventDefault();
     modalSection.classList.add("modal-animate-error");
   } else {

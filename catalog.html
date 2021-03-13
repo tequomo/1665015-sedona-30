@@ -58,7 +58,7 @@
           </fieldset>
           <fieldset>
             <legend>Тип жилья:</legend>
-            <ul>
+            <ul class="living-type-block">
               <li class="search-filter-item">
                 <input class="visually-hidden search-filter-checkbox" type="checkbox" name="hotel" id="filter-hotel"
                   checked>
@@ -111,23 +111,23 @@
           <div class="sorting-switches flex-apply">
             <h3>Сортировка:</h3>
             <ul>
-              <li class="sorting-switches-current">
+              <li class="sorting-case sorting-case-current">
                 <a>По цене</a>
               </li>
-              <li>
+              <li class="sorting-case">
                 <a href="#">По типу</a>
               </li>
-              <li>
+              <li class="sorting-case">
                 <a href="#">По рейтингу</a>
               </li>
-              <li>
+              <li class="sorting-case">
                 <a class="search-result-ascend" href="#">
                   <svg aria-label="По возрастанию" width="11" height="10" viewBox="0 0 11 10" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" />
                   </svg>
                 </a>
-                <a aria-label="По убыванию" class="search-result-descend" href="#">
+                <a aria-label="По убыванию" class="search-result-descend search-result-current" href="#">
                   <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 10L0 0H11" fill="#CACACA" />
                   </svg>
@@ -305,7 +305,6 @@
       </p>
     </footer>
   </div>
-  <script src="js/script.js"></script>
 </body>
 
 </html>
