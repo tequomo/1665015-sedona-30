@@ -941,7 +941,7 @@ img {
   margin-bottom: 24px;
 }
 
-.search-filter-form fieldset {
+.search-filter-form fieldset, .search-form fieldset {
   border: none;
   margin: 0px;
   padding: 0px;

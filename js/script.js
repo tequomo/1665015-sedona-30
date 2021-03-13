@@ -6,6 +6,10 @@ const arrivalDate = modalSection.querySelector(".search-field-arrival");
 const departureDate = modalSection.querySelector(".search-field-departure");
 const adultsAmount = modalSection.querySelector(".search-field-adults");
 const childrenAmount = modalSection.querySelector(".search-field-children");
+const adultsAmountMin = adultsAmount.min;
+const adultsAmountMax = adultsAmount.max;
+const childrenAmountMin = childrenAmount.min;
+const childrenAmountMax = childrenAmount.max;
 
 // Buttons
 const arrivalCalendar = modalSection.querySelector(".arrival-block button");
@@ -18,25 +22,49 @@ const modalSubmitButton = modalSection.querySelector(".search-button");
 
 // Variables
 let isStorageSupport = true;
-let siteStorage = "";
+let storageArrivalDate = "";
+let storageDepartureDate = "";
+let storageAdultsAmount = "";
+let storageChildrenAmount = "";
 
 // Functions
-
 
 // Event Handlers
 
 // Hide Modal Section On Page Load
-window.onload = modalSection.classList.add("modal-animate-up");
+window.onload = function() {
+modalSection.classList.add("modal-animate-up");
+searchForm.querySelector("fieldset").disabled = true;
+}
+
+// if (modalSection.classList.contains("modal-animate-up")) {
+//   searchForm.querySelector("fieldset").disabled = true;
+// } else searchForm.querySelector("fieldset").disabled = false;
 
 modalButton.addEventListener("click", function (evt) {
   if (modalSection.classList.contains("modal-animate-up")) {
     modalSection.classList.remove("modal-animate-up");
     modalSection.classList.add("modal-animate-down");
+    searchForm.querySelector("fieldset").disabled = false;
     modalSection.focus();
+
+    if (storageArrivalDate) {
+      arrivalDate.value = storageArrivalDate;
+    }
+    if (storageDepartureDate) {
+      departureDate.value = storageDepartureDate;
+    }
+    if (storageAdultsAmount) {
+      adultsAmount.value = storageAdultsAmount;
+    }
+    if (storageChildrenAmount) {
+      childrenAmount.value = storageChildrenAmount;
+    }
   }
   else if (modalSection.classList.contains("modal-animate-down")) {
     modalSection.classList.remove("modal-animate-down");
     modalSection.classList.add("modal-animate-up");
+    searchForm.querySelector("fieldset").disabled = true;
     if (modalSection.classList.contains("modal-animate-error")) {
       modalSection.classList.remove("modal-animate-error");
     }
@@ -62,14 +90,17 @@ childrenAmountIncrease.addEventListener("click", function (evt) {
 
 // Check LocalStorage Support
 try {
-  siteStorage = localStorage.getItem("arrivalDate");
+  storageArrivalDate = localStorage.getItem("arrivalDate");
+  storageDepartureDate = localStorage.getItem("departureDate");
+  storageAdultsAmount = localStorage.getItem("adultsAmount");
+  storageChildrenAmount = localStorage.getItem("childrenAmount");
 } catch (err) {
   isStorageSupport = false;
 }
 
 // Check Form
 searchForm.addEventListener("submit", function (evt) {
-  if (!arrivalDate.value || !departureDate.value || !adultsAmount.value || !childrenAmount.value) {
+  if (!arrivalDate.value || !departureDate.value || !adultsAmount.value || !childrenAmount.value || adultsAmount.value < adultsAmountMin || childrenAmount.value < childrenAmountMin) {
     evt.preventDefault();
     modalSection.classList.add("modal-animate-error");
   } else {
@@ -80,6 +111,19 @@ searchForm.addEventListener("submit", function (evt) {
       localStorage.setItem("childrenAmount", childrenAmount.value);
     }
   }
+});
+
+// Check Input[type=number]
+adultsAmount.addEventListener("change", function() {
+  let val = parseInt(this.value);
+  if (val < adultsAmountMin) this.value = adultsAmountMin;
+  if (val > adultsAmountMax) this.value = adultsAmountMax;
+});
+
+childrenAmount.addEventListener("change", function() {
+  let val = parseInt(this.value);
+  if (val < childrenAmountMin) this.value = childrenAmountMin;
+  if (val > childrenAmountMax) this.value = childrenAmountMax;
 });
 
 modalSubmitButton.addEventListener("click", function (evt) {
@@ -95,7 +139,11 @@ window.addEventListener("keydown", function (evt) {
     if (modalSection.classList.contains("modal-animate-down")) {
       evt.preventDefault();
       modalSection.classList.remove("modal-animate-down");
+      modalSection.offsetWidth = modalSection.offsetWidth;
       modalSection.classList.add("modal-animate-up");
+    }
+    if (modalSection.classList.contains("modal-animate-error")) {
+      modalSection.classList.remove("modal-animate-error");
     }
   }
 });
