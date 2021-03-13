@@ -131,7 +131,6 @@ modalSubmitButton.addEventListener("click", function (evt) {
 // Catch ESC key
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    // if (evt.key === 0x1B) {
     if (modalSection.classList.contains("modal-animate-down")) {
       evt.preventDefault();
       modalSection.classList.remove("modal-animate-down");
