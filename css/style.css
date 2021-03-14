@@ -628,6 +628,10 @@ img {
   opacity: 0.3;
 }
 
+.footer-catalog {
+  position: relative;
+}
+
 /* Modal window */
 
 .modal {
@@ -807,7 +811,7 @@ img {
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-anti-flash-white);
-  border: none;
+  border: 2px solid var(--basic-anti-flash-white);
   height: 38px;
 }
 
@@ -822,12 +826,11 @@ img {
 .search-form input[type="text"]:hover,
 .search-form input[type="number"]:hover {
   background-color: var(--basic-brighter-gray);
-  border: none;
+  border-color: var(--basic-brighter-gray);
 }
 
 .search-form input[type="text"]:focus,
 .search-form input[type="number"]:focus {
-  border: 2px solid;
   border-color: var(--basic-platinum);
   background-color: var(--basic-white);
 }
